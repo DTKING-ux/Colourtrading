@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prediction Panel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #0072ff, #00c6ff);
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px 100px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    #timer {
+      font-size: 18px;
+      color: #ffdb4d;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: block;
+      width: 90%;
+      max-width: 300px;
+      margin: 10px auto;
+      padding: 14px 20px;
+      font-size: 17px;
+      background-color: #ffffff;
+      color: #0072ff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background-color: #e6e6e6;
+    }
+
+    .btn:disabled {
+      background-color: #cccccc;
+      color: #999999;
+      cursor: not-allowed;
+    }
+
+    #support {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 300px;
+    }
+
+    @media screen and (max-width: 480px) {
+      .btn {
+        font-size: 16px;
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎯 Welcome to Prediction Zone</h1>
+  <div id="timer">⏳ Link expires in <span id="countdown">60</span>s</div>
+
+  <a id="btn3" class="btn" href="https://t.me/PAIDSURESHOTBOT?start=_tgr_rI2pY_IxYWE1" target="_blank">💸 Paid Sure Shot</a>
+  <a id="btn4" class="btn" href="https://t.me/PREDICTION2617BOT?start=_tgr_5gTAgg81Yzc1" target="_blank">🎯 Free Prediction Hack</a>
+
+  <div id="support">
+    <a id="btn5" class="btn" href="https://t.me/DTKINGSUPPORTBOT?start=_tgr_Rqv5-1M1ZmY1" target="_blank">🛠 Contact Support</a>
+  </div>
+
+  <script>
+    let timeLeft = 60;
+    const countdownEl = document.getElementById('countdown');
+    const timerEl = document.getElementById('timer');
+    const buttons = [btn3, btn4, btn5];
+
+    const countdown = setInterval(() => {
+      timeLeft--;
+      countdownEl.textContent = timeLeft;
+      if (timeLeft <= 0) {
+        clearInterval(countdown);
+        timerEl.textContent = "❌ Link Expired";
+        buttons.forEach(btn => btn.setAttribute('disabled', true));
+      }
+    }, 1000);
+  </script>
+
+</body>
+</html>
